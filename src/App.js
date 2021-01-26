@@ -38,14 +38,14 @@ function App() {
 
   //Save locally for refreshing page
   const saveLocalTodos = () => {
-    if(localStorage.getItems("todos") === null){
+    if(localStorage.getItem("todos") === null){
       localStorage.setItem("todos", JSON.stringify([]));
     } else{
       localStorage.setItem("todos", JSON.stringify(todos));
     }
   };  
   const getLocalTodos = () => {
-    if(localStorage.getItems("todos") === null){
+    if(localStorage.getItem("todos") === null){
       localStorage.setItem("todos", JSON.stringify([]));
     } else{
       let todoLocal = JSON.parse(localStorage.getItem("todos"));
